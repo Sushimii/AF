@@ -1,20 +1,20 @@
-# AF
+# For
 ## Versão: 1.0 
 ### Status do Projeto: ✔️ Concluído 
 ### Tópicos 
 ### 🔹 Descrição do projeto:
 
-Avaliação final contendo 5 programas dividido em branchs, os nomes dos arquivos estão for porém são programações diferentes o nome da branch equivale ao programa solicitado
+Programa utilizando condicional "for" para a AF
 
 ### 🔹 Recursos inseridos:
 
-Classes, Switch, Metodos, Condicionais
+Condicionais 
 
 ### 🔹 Desenvolvedores/Contribuintes:
 
 Arthur Iwata
 
-A avaliação final do Ohata
+APP de condicional for
 
 Linguagens, dependencias e libs utilizadas 📚
 
