@@ -1,30 +1,56 @@
 ﻿using System;
-//Puxando todas as bibliotecas básicas 
+//Puxando todas bibliotecas basicas
 using System.Globalization;
-
-
 class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        // Declaração da variável do tipo int
-        int num;
+        // Declaração das váriaveis
+        char op;
+        double num1, num2;
+        string cont;
 
-        // Tela mostrando uma mensagem para o usuário dar um valor à variável "num"
-        Console.Write("Digite um número inteiro positivo: ".ToString(CultureInfo.InvariantCulture));
-        // Valor sendo atribuído à variável "num"
-        num = int.Parse(Console.ReadLine());
-
-        // Tela mostrando o resultado para o usuário
-        Console.Write($"Os primeiros {num} números pares são: ".ToString(CultureInfo.InvariantCulture));
-
-        // Condição para a variável 'i' = 2, 'i' menor ou igual ao valor da variável 'num' * 2, ele irá acrescentar 2 à variável "i"
-        for (int i = 2; i <= num * 2; i += 2)
+        do
         {
-            // Tela mostrando os valores da variável 'i' depois dos acréscimos 
-            Console.Write(i + " ".ToString(CultureInfo.InvariantCulture));
-        }
+            // Solicita ao usuário que digite um operador
+            Console.Write("ENTRE COM O OPERADOR: +, -, *, /: ".ToString(CultureInfo.InvariantCulture));
+            op = char.Parse(Console.ReadLine());
 
+            // Solicita ao usuário que digite o primeiro valor
+            Console.Write("ENTRE COM O PRIMEIRO VALOR: ".ToString(CultureInfo.InvariantCulture));
+            num1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+            // Solicita ao usuário que digite o segundo valor
+            Console.Write("ENTRE COM O SEGUNDO VALOR: ".ToString(CultureInfo.InvariantCulture));
+            num2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            // Executa a operação correspondente ao operador inserido
+            switch (op)
+            {
+                case '+':
+                    Console.WriteLine($"{num1} + {num2} = {num1 + num2}".ToString(CultureInfo.InvariantCulture));
+                    break;
+                case '-':
+                    Console.WriteLine($"{num1} - {num2} = {num1 - num2}".ToString(CultureInfo.InvariantCulture));
+                    break;
+                case '*':
+                    Console.WriteLine($"{num1} * {num2} = {num1 * num2}".ToString(CultureInfo.InvariantCulture));
+                    break;
+                case '/':
+                    Console.WriteLine($"{num1} / {num2} = {num1 / num2}".ToString(CultureInfo.InvariantCulture));
+                    break;
+                default:
+                    Console.WriteLine("OPERADOR ERRADO, POR FAVOR INSIRA O OPERADOR CORRETO".ToString(CultureInfo.InvariantCulture));
+                    break;
+            }
+
+            // Pergunta ao usuário se ele deseja continuar
+            Console.Write("Quer continuar (S/N)? ".ToString(CultureInfo.InvariantCulture));
+            cont = Console.ReadLine();
+            //Função while  com condição ignorando se o caracter é minusculo ou maiusculo
+        } while (cont.Equals("S", StringComparison.OrdinalIgnoreCase));
+
+        // Exibe mensagem de encerramento
+        Console.WriteLine("OBRIGADO VOLTE SEMPRE :)".ToString(CultureInfo.InvariantCulture));
     }
 }
